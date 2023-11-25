@@ -1,4 +1,8 @@
 #[derive(Debug)]
+#[derive(Ord)]
+#[derive(Eq)]
+#[derive(PartialOrd)]
+#[derive(PartialEq)]
 pub struct Employee {
     name: String,
     department: String,

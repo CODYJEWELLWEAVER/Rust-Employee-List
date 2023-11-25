@@ -16,6 +16,8 @@ pub fn add_employee(
 
     // insert employee, dept_vector takes ownership 
     dept_vector.push(empl);
+    // sort vector with new insert
+    dept_vector.sort();
 }
 
 pub fn print_department(
