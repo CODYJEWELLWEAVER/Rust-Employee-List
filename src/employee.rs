@@ -9,6 +9,7 @@ pub struct Employee {
 }
 
 impl Employee {
+    /* Public Constructor */
     pub fn new (
         empl_name: String, 
         empl_dept: String
@@ -20,6 +21,7 @@ impl Employee {
         &self.department[..]
     }
 
+    // utility for printing lists in map_util.rs
     pub fn print(&self) {
         println!(
             "\tName: {}", self.name
