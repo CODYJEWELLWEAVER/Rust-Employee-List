@@ -12,7 +12,7 @@ fn main() {
     loop {
         // display options 
         ui::print_options();
-        // and collect option choice
+        // collect option choice
         user_choice = ui::get_user_choice();
 
         match user_choice {
