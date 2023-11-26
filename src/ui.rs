@@ -1,6 +1,7 @@
 use std::io;
 use crate::employee::Employee;
 
+/* Choice Set For UI Loop */
 #[derive(Debug)]
 pub enum Choices {
     Add,
@@ -18,6 +19,8 @@ pub fn print_options() {
     println!("  4: Quit ('4' or 'q')");
 }
 
+/* Gets cli input from user 
+    and maps it to a Choices::Type. */
 pub fn get_user_choice() -> Choices {
     let mut raw_input = String::new();
 
@@ -46,6 +49,8 @@ pub fn invalid_choice_prompt() {
     );
 }
 
+/* Prompts user and creates new Employee struct 
+    from cli input. */
 pub fn get_employee() -> Employee {
     let mut name_in = String::new();
     let mut dept_in = String::new();
@@ -69,6 +74,8 @@ pub fn get_employee() -> Employee {
     Employee::new(empl_name, empl_dept)
 }
 
+/* Used for getting department choice string when printing 
+    all employees in a specific department. */
 pub fn get_department() -> String {
     let mut dept_in = String::new();
 
