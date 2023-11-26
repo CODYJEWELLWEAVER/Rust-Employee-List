@@ -2,6 +2,7 @@ use std::collections::HashMap;
 use crate::employee::Employee;
 
 pub fn new_map() -> HashMap<String, Vec<Employee>> {
+    // wrapper fun
     HashMap::new()
 }
 
@@ -16,7 +17,7 @@ pub fn add_employee(
 
     // insert employee, dept_vector takes ownership 
     dept_vector.push(empl);
-    // sort vector with new insert
+    // sort vector for alphabetical printing
     dept_vector.sort();
 }
 
@@ -24,10 +25,10 @@ pub fn print_department(
     dept: String,
     map: &HashMap<String, Vec<Employee>>
 ) {
-    let dept_vector = map.get(&dept);
-    if let Some(vector) = dept_vector {
+    let vector_option = map.get(&dept);
+    if let Some(dept_vector) = vector_option {
         println!("Employees in {}:", &dept);
-        for empl in vector {
+        for empl in dept_vector {
             empl.print();
         }
     } else {
